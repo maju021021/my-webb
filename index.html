@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>هک شدی 😱</title>
+  <style>
+    body {
+      background-color: black;
+      color: red;
+      text-align: center;
+      font-family: 'Courier New', monospace;
+      margin-top: 100px;
+    }
+    #scareImg {
+      display: none;
+      width: 100%;
+      height: auto;
+      max-width: 600px;
+    }
+    #mainBtn {
+      padding: 20px 40px;
+      font-size: 24px;
+      cursor: pointer;
+      background: red;
+      color: white;
+      border: none;
+      border-radius: 10px;
+    }
+    h1 {
+      animation: blink 1s infinite;
+    }
+    @keyframes blink {
+      0% {opacity: 1;}
+      50% {opacity: 0;}
+      100% {opacity: 1;}
+    }
+  </style>
+</head>
+<body>
+  <h1>روی دکمه نزن... هشدار جدی! ⚠️</h1>
+  <button id="mainBtn">کلیک نکن!</button><br><br>
+  <img id="scareImg" src="https://i.postimg.cc/W4NwbL2Y/jump-scare.jpg" alt="ترسناک">
+
+  <audio id="scareSound">
+    <source src="https://www.soundjay.com/human/sounds/scream-01.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    const btn = document.getElementById("mainBtn");
+    const img = document.getElementById("scareImg");
+    const sound = document.getElementById("scareSound");
+
+    btn.addEventListener("click", () => {
+      img.style.display = "block";
+      sound.play();
+      btn.style.display = "none";
+      document.body.style.backgroundColor = "red";
+      document.querySelector("h1").textContent = "هک شدی! 💀 شوخی بود 😁";
+    });
+  </script>
+</body>
+</html>
+
+</body>
+</html>
